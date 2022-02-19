@@ -3,10 +3,17 @@ import { ThemeProvider } from '@mui/material/styles';
 import theme from './styling/materialUI/theme';
 import Box from '@mui/material/Box';
 import {style} from './styling/styling';
+import {
+  RecoilRoot,
+  atom,
+  selector,
+  useRecoilState,
+  useRecoilValue,
+} from 'recoil';
 
 import Header from './components/Header';
 // import ButtonGrid from './components/ButtonGrid';
-import HomePage from './page/HomePage';
+import DemoPage from './page/demoPage/DemoPage';
 
 // const StoreContext = React.createContext({});
 
@@ -15,14 +22,16 @@ class App extends Component {
   render() {
     return (
       // <StoreContext.Provider value={this.state}>
+      <RecoilRoot>
         <ThemeProvider theme={theme}>
           <Box sx={style.outerBox}>
             <Header />
             <Box sx={style.innerBox}>
-              <HomePage />
+              <DemoPage />
             </Box>
           </Box>
         </ThemeProvider>
+      </RecoilRoot>
       // </StoreContext.Provider>
     );
   }
