@@ -10,7 +10,7 @@ interface Props {
 const CountDisplay: FC<Props> = ({count}): ReactElement => {
   return (
         <Grid item>
-          <Chip color="primary" label={count} />
+          <Chip id="count" color="primary" label={`count = ${count}`} />
         </Grid>
   );
 };

@@ -12,8 +12,8 @@ interface Props {
 const ButtonGroup: FC<Props> = ({increment, decrement}): ReactElement => {
   return (
     <Grid item>
-        <Button text='increment' clickFunction={increment} style="dark" />
-        <Button text='decrement' clickFunction={decrement} style="dark" />
+        <Button idName='increment_button' text='increment' clickFunction={increment} />
+        <Button idName='decrement_button' text='decrement' clickFunction={decrement} />
     </Grid>
   );
 };

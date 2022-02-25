@@ -5,15 +5,15 @@ import ButtonMUI from '@mui/material/Button';
 import { isPropertySignature } from "typescript";
 
 interface Props {
-  text: string,
-  clickFunction: Function,
-  style: string
+  idName: string
+  text: string
+  clickFunction: Function
 }
 
-const Button: FC<Props> = ({text, clickFunction, style}): ReactElement => {
+const Button: FC<Props> = ({idName, text, clickFunction}): ReactElement => {
   return (
       <>
-          <ButtonMUI variant="contained" onClick={() => clickFunction('test')}>{text}</ButtonMUI>
+          <ButtonMUI id={idName} variant="contained" onClick={() => clickFunction('test')}>{text}</ButtonMUI>
       </>
   );
 };
