@@ -7,14 +7,10 @@ describe('visit local', () => {
 
 describe('increment/decrement to 0', () => {
     it('clicks "increment"', () => {
-        // cy.visit('http://localhost:3030/')
-        // cy.contains('increment')
         let increment = cy.get('#increment_button')
         increment.click()
     })
     it('clicks "decrement"', () => {
-        // cy.visit('http://localhost:3030/')
-        // cy.contains('increment')
         let decrement = cy.get('#decrement_button')
         decrement.click()
     })

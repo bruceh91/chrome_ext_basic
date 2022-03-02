@@ -32,7 +32,7 @@ interface Props {
 }
 
 const DemoPage: FC<Props> = ({}): ReactElement => {
-  
+
   const [count, setCount] = useRecoilState(countState);
   const [lastClicked, setLastClicked] = useRecoilState(lastClickedState);
 
