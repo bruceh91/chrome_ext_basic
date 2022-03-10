@@ -1,7 +1,7 @@
 import React, { ReactElement, FC } from "react";
 import Grid from '@mui/material/Grid';
 
-import Count from './components/countDisplay';
+import Count from './components/CountDisplay';
 import LastClicked from './components/LastClickedDisplay';
 import ButtonGroup from './components/ButtonGroup';
 
@@ -25,24 +25,18 @@ const lastClickedState = atom({
   default: 'none', // default value (aka initial value)
 });
 
-interface Props {
-//   text: string,
-//   clickFunction: Function,
-//   style: string
-}
 
-const DemoPage: FC<Props> = ({}): ReactElement => {
-
+const DemoPage= () => {
   const [count, setCount] = useRecoilState(countState);
   const [lastClicked, setLastClicked] = useRecoilState(lastClickedState);
 
-  const increment = function(text: string): any {
+  const increment = function(text){
     console.log('increment');
     setCount(count+1);
     setLastClicked('increment');
     };
 
-  const decrement = function(text: string): any {
+  const decrement = function(text){
     console.log('decrement');
     setCount(count-1);
     setLastClicked('decrement');

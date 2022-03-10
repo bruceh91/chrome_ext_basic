@@ -3,16 +3,8 @@ import React, { ReactElement, FC } from "react";
 
 import ButtonMUI from '@mui/material/Button';
 import { style } from '../styling/styling';
-import { isPropertySignature } from "typescript";
 
-interface Props {
-  idName: string
-  text: string
-  clickFunction: Function
-  type?: string
-}
-
-const Button: FC<Props> = ({idName, text, clickFunction, type}): ReactElement => {
+const Button = ({idName, text, clickFunction, style}) => {
 
 
 
@@ -24,17 +16,23 @@ const Button: FC<Props> = ({idName, text, clickFunction, type}): ReactElement =>
 
 
 
-  let style = {}
-  switch(type) {
-    case 'disabled': {
-        style = style.button.dark
-        break;
-    }
-    default: {
-       style = {backgroundColor: '#B1D0E0', border: "1px solid #406882"}
-       break;
-    }
- }
+  // let btnStyle = {}
+  // console.log('idName = ', idName);
+  // console.log('type = ', type);
+  // if (type) {
+  //   switch(type) {
+  //     case 'disabled': {
+  //         btnStyle = style.button.dark
+  //         break;
+  //     }
+  //     default: {
+  //         btnStyle = style.button.light
+  //         break;
+  //     }
+  //  }
+  // }
+
+//  console.log('btnStyle = ', btnStyle);
   return (
       <>
           <ButtonMUI id={idName} style={style} variant="contained" onClick={() => clickFunction('test')}>{text}</ButtonMUI>

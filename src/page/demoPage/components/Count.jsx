@@ -3,13 +3,7 @@ import React, { ReactElement, FC } from "react";
 import Grid from '@mui/material/Grid';
 import Chip from '@mui/material/Chip';
 
-interface Props {
-  count: number,
-//   clickFunction: Function,
-//   style: string
-}
-
-const DemoPage: FC<Props> = ({count}): ReactElement => {
+const DemoPage= ({count}) => {
   return (
         <Grid item>
           <Chip color="primary" label={count} />

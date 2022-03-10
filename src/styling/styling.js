@@ -7,13 +7,13 @@ let color =  {
     darkestBlue: '#1A374D'
 }
 
-let style:any = {
+let style = {
     outerBox: {
         maxHeight: 388,
         width: 400,
         paddingTop: '5px',
         paddingBottom: '30px',
-        backgroundColor: color.darkestBlue,
+        backgroundColor: color.darkBlue,
         margin: '5px 5px'
     },
     innerBox: {
@@ -22,18 +22,18 @@ let style:any = {
         margin: 'auto'
     },
     header: {
-        textAlign: 'center' as 'center',
+        textAlign: 'center',
         color: color.darkestBlue
     },
     button: {
         light: {
-            color: '#B1D0E0',
-            backgroundColor: color.darkBlue,
-            border: `1px solid ${color.lightBlue}`
-        },
-        dark: {
             backgroundColor: color.lightBlue,
             border: `1px solid ${color.darkBlue}`
+        },
+        dark: {
+            color: color.lightBlue,
+            backgroundColor: color.darkBlue,
+            border: `1px solid ${color.lightBlue}`
         }
     }
 }

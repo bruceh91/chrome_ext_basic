@@ -9,13 +9,7 @@ import {
   useRecoilValue,
 } from 'recoil';
 
-interface Props {
-    //   text: string,
-    //   clickFunction: Function,
-    //   style: string
-    }
-
-const HomePage: FC<Props> = ({}): ReactElement => {
+const HomePage = ({}) => {
   return (
     <>test</>
   );

@@ -7,17 +7,14 @@ import { RecoilRoot } from 'recoil';
 
 import Routes from './Routes'
 
-class App extends Component {
-
-  render() {
-    return (
-      <RecoilRoot>
+function App() {
+  return (
+    <RecoilRoot>
         <ThemeProvider theme={theme}>
           <Routes />
         </ThemeProvider>
       </RecoilRoot>
-    );
-  }
+  );
 }
 
 export default App;

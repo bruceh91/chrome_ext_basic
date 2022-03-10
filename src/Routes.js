@@ -23,13 +23,7 @@ const routeState = atom({
   default: 'demo', // default value (aka initial value)
 });
 
-interface Props {
-    //   text: string,
-    //   clickFunction: Function,
-    //   style: string
-    }
-
-const Routes: FC<Props> = ({}): ReactElement => {
+const Routes= ({}) => {
     const [route, setRoute] = useRecoilState(routeState);
 
   return (
