@@ -13,7 +13,7 @@ const ButtonGroup: FC<Props> = ({increment, decrement}): ReactElement => {
   return (
     <Grid item>
         <Button idName='increment_button' text='increment' clickFunction={increment} />
-        <Button idName='decrement_button' text='decrement' clickFunction={decrement} />
+        <Button idName='decrement_button' text='decrement' clickFunction={decrement} type="disabled" />
     </Grid>
   );
 };

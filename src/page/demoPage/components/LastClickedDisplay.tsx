@@ -10,7 +10,7 @@ interface Props {
 const LastClickedDisplay: FC<Props> = ({lastClicked}): ReactElement => {
   return (
         <Grid item>
-          <Chip id="lastClicked" color="primary" variant="outlined" label={lastClicked} />
+          <Chip id="lastClicked" variant="outlined" label={lastClicked} />
         </Grid>
   );
 };

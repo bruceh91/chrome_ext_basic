@@ -28,10 +28,45 @@ import {
 const theme = createTheme({
   palette: {
     primary: {
-      light: '#B1D0E0',
       main: '#6998AB',
-      dark: '#406882'
+      light: '#B1D0E0',
+      dark: '#406882',
+      contrastText: '#406882',
     },
+    secondary: {
+      main: '#1A374D',
+    },
+    background: {
+      paper: '#6998AB',
+      default: '#406882',
+    },
+    text: {
+      primary: '#406882',
+      secondary: '#B1D0E0',
+      disabled: '#1A374D',
+    },
+    divider: '#1A374D',
+  },
+  typography: {
+    button: {
+      fontWeight: 800,
+      fontSize: '1.5rem',
+    },
+    fontSize: 15,
+    fontWeightLight: 400,
+    fontWeightRegular: 500,
+    fontWeightMedium: 600,
+  },
+  /* @ts-ignore */
+  overrides: {
+    MuiButton: {
+      root: {
+        textTransform: 'none',
+      },
+    },
+  },
+  shape: {
+    borderRadius: 5,
   },
 })
 export default theme

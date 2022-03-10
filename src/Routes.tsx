@@ -4,6 +4,7 @@ import {style} from './styling/styling';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Header from './components/Header';
+import Paper from '@mui/material/Paper';
 
 import DemoPage from './page/demoPage/DemoPage';
 import HomePage from './page/homePage/Home';
@@ -19,7 +20,7 @@ import {
 
 const routeState = atom({
   key: 'route', // unique ID (with respect to other atoms/selectors)
-  default: 'd', // default value (aka initial value)
+  default: 'demo', // default value (aka initial value)
 });
 
 interface Props {
@@ -34,9 +35,10 @@ const Routes: FC<Props> = ({}): ReactElement => {
   return (
     <Box sx={style.outerBox}>
         <Header />
-        <Box sx={style.innerBox}>
-            {route === 'home' ? <HomePage /> : <DemoPage />}
-        </Box>
+        <Paper sx={style.innerBox}>
+            {route === 'home' ? <HomePage /> : null}
+            {route === 'demo' ? <DemoPage /> : null}
+        </Paper>
     </Box>
   );
 };
