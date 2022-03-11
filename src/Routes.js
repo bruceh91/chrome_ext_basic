@@ -8,6 +8,7 @@ import Paper from '@mui/material/Paper';
 
 import DemoPage from './page/demoPage/DemoPage';
 import HomePage from './page/homePage/Home';
+import SchedulePage from './page/schedulePage/Schedule';
 
 import {
   RecoilRoot,
@@ -20,18 +21,24 @@ import {
 
 const routeState = atom({
   key: 'route', // unique ID (with respect to other atoms/selectors)
-  default: 'demo', // default value (aka initial value)
+  default: 'home', // default value (aka initial value)
 });
 
 const Routes= ({}) => {
-    const [route, setRoute] = useRecoilState(routeState);
+  const [route, setRoute] = useRecoilState(routeState);
+
+  const switchView = (route) => {
+    console.log('hit inside switch view')
+    setRoute(route)
+  }
 
   return (
     <Box sx={style.outerBox}>
         <Header />
         <Paper sx={style.innerBox}>
-            {route === 'home' ? <HomePage /> : null}
-            {route === 'demo' ? <DemoPage /> : null}
+            {route === 'demo' ? <DemoPage switchView={switchView} /> : null}
+            {route === 'home' ? <HomePage switchView={switchView} /> : null}
+            {route === 'schedule' ? <SchedulePage switchView={switchView} /> : null}
         </Paper>
     </Box>
   );

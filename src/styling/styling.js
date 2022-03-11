@@ -27,6 +27,8 @@ let style = {
     },
     button: {
         light: {
+            width: '100%',
+            color: color.darkBlue,
             backgroundColor: color.lightBlue,
             border: `1px solid ${color.darkBlue}`
         },
@@ -34,6 +36,22 @@ let style = {
             color: color.lightBlue,
             backgroundColor: color.darkBlue,
             border: `1px solid ${color.lightBlue}`
+        },
+        thin: {
+            height: '1.25rem',
+            fontSize: '16px',
+            justifyContent: 'flex-start'
+        }
+    },
+    grid: {
+        item: {
+            fullWidth: {
+                width: '90%'
+            },
+            weekGrid: {
+                // paddingTop: '5px',
+                width: '75%'
+            }
         }
     }
 }
